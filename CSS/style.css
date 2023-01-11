@@ -12,19 +12,3 @@ body{
     color: white;
     margin-left: 1em;
 }
-
-#beers {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
-  .beer {
-    flex: 1;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .beer img {
-    max-width: 40%;
-  }

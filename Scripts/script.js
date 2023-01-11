@@ -257,16 +257,3 @@ function validarCNPJ(cnpj) {
     return true;
     
 }
-
-//ANDRE EXPLICAR
-const descBtns = document.querySelectorAll(".desc-btn");
-descBtns.forEach(function(descBtn) {
-  descBtn.addEventListener("click", function() {
-    const desc = descBtn.nextElementSibling;
-    if (desc.style.display === "none") {
-      desc.style.display = "block";
-    } else {
-      desc.style.display = "none";
-    }
-  });
-});
