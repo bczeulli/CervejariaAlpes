@@ -14,9 +14,9 @@
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark bg-gradient">
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark bg-gradient">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="#home">
                 <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,21 +25,22 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Quem Somos</a>
+                    <a class="nav-link active" aria-current="page" href="#sobreNos">Quem Somos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Cervejas</a>
+                    <a class="nav-link active" aria-current="page" href="#produtos">Cervejas</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contato</a>
+                    <a class="nav-link active" aria-current="page" href="#contato">Contato</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
+          <div id="home"></div>
           <div class="banner"></div>
     </header>
     <main>
@@ -65,23 +66,24 @@
             
         </div>
       </section>
+      <div id="sobreNos"></div>
       <section class="sobreNos">
         
         <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 mt-5">
-            <div class="col"> 
+          <div class="row row-cols-1 row-cols-sm-2  mt-5">
+            <div class="col "> 
               <div class="mt-5">
                 <h1> Sobre Nós</h1>
                 <p>  A Cervejaria Alpes é uma cervejaria artesanal de Contagem / MG. Começou sua produção de forma  independente em 2017 e desde então ficou bastante conhecida no estado, frequentando festivais e sendo premiada com medalha ouro pela sua cerveja “Alpinista” e  Bronze com a “Queda Livre” pelo Breja  Awards 2021.</p> 
               </div>
             </div>
-            <div class="col">
+            <div class="col d-flex justify-content-center">
               <img src="img/sobreNos/cervejaria.jpg" class="w-75 shadow rounded">
             </div>
           </div>
 <!--- ************************************************************************************************************-->
           <div class="row row-cols-1 row-cols-sm-2 mt-5">
-            <div class="col">
+            <div class="col d-flex justify-content-center">
               <img src="img/sobreNos/festival.jpg" class="w-75 shadow rounded">
             </div>
 
@@ -104,20 +106,21 @@
                 <p> Temos princípios que são a essência da nossa <strong>Cultura</strong>, que nos permitem ter consciência no jeito de fazer as coisas, respeitando as culturas locais e permitindo que trabalhemos com um único Sonho em todo o mundo. Alguns deles são: Sonhamos grande; somos impulsionados por pessoas incríveis e construímos times diversos por meio de inclusão e colaboração; lideramos mudanças e inovamos para os nossos consumidores e crescemos junto com nossos clientes.</p> 
               </div>
             </div>
-            <div class="col">
+            <div class="col d-flex justify-content-center">
               <img src="img/sobreNos/cerveja.jpg" class="w-75 shadow rounded">
             </div>
           </div>
         </div>
       </section>
+      <div id="produtos"></div>
       <section class="produtos">
         <div class="container mt-5">
           <h1>Nossas Cervejas</h1>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mt-5">
+          <div class="row row-cols-1 row-cols-lg-5 mt-5">
       
             <div class="col">
               <div class="d-flex justify-content-center">
-                <img class="mb-3" decoding="async" width="100" height="300" src="img/produtos/Rouge-Lager-100x300.png" alt="Beer 1">
+                <img class="mb-3" decoding="async" width="100" height="300" src="./img/produtos/Rouge-Lager-100x300.png" alt="Beer 1">
               </div>
               <h3>Rouge Lager</h3>
               <h5> Alemã</h5>
@@ -127,7 +130,7 @@
             </div>
             <div class="col">
               <div class="d-flex justify-content-center">
-                <img class="mb-3" decoding="async" width="100" height="300" src="img/produtos/Kentucky-Common-100x300.png" alt="Beer 1">
+                <img class="mb-3" decoding="async" width="100" height="300" src="./img/produtos/Kentucky-Common-100x300.png" alt="Beer 1">
               </div>
               <h3>Rouge Lager</h3>
               <h5>Americana</h5>
@@ -137,7 +140,7 @@
             </div>
             <div class="col">
               <div class="d-flex justify-content-center">
-                <img class="mb-3" decoding="async" width="100" height="300" src="img/produtos/Belgian-tripel-100x300.png" alt="Beer 1">
+                <img class="mb-3" decoding="async" width="100" height="300" src="./img/produtos/Belgian-tripel-100x300.png" alt="Beer 1">
               </div>
               <h3>Belgian Tripel</h3>
               <h5>Belga</h5>
@@ -147,7 +150,7 @@
             </div>
             <div class="col">
               <div class="d-flex justify-content-center">
-                <img class="mb-3" decoding="async" width="100" height="300" src="img/produtos/Alpendorf-Alpenlab-100x300 (1).png" alt="Beer 1">
+                <img class="mb-3" decoding="async" width="100" height="300" src="./img/produtos/Alpendorf-Alpenlab-100x300 (1).png" alt="Beer 1">
               </div>
               <h3>Friburgo IPA</h3>
               <h5>Brasileira</h5>
@@ -157,7 +160,7 @@
             </div>
             <div class="col">
               <div class="d-flex justify-content-center">
-                <img class="mb-3" decoding="async" width="100" height="300" src="img/produtos/Alpendorf-Alpenlab-100x300.png" alt="Beer 1">
+                <img class="mb-3" decoding="async" width="100" height="300" src="./img/produtos/Alpendorf-Alpenlab-100x300.png" alt="Beer 1">
               </div>
               <h3>Best Bitter</h3>
               <h5>Britânica</h5>
@@ -168,12 +171,13 @@
           </div>
         </div>
       </section>
+      <div id="contato"></div>
       <section class="contato">
         <div class="container mb-5">
-          <div class="row">
+          <div class="row row-cols-1 row-cols-md-2">
             <div class="col">
                 <h4 class="mb-3">Cadastre-se</h4>
-                <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="return validado()">
                   <input type=hidden name="oid" value="00DDn000007pbsf">
                   <input type=hidden name="retURL" value="http://127.0.0.1:5500/index.html">
                   <input type=hidden id="lead_source" name="lead_source" value="Web">
@@ -239,10 +243,10 @@
                       </select>
                       <small id="validacaoTipoNegocio"></small>
                     </div>
-        
                   </div>
-                  <button class="w-25 btn btn-primary btn-lg mt-3" type="submit" id="button">Enviar</button>
+                  <button class=" btn btn-primary btn-lg mt-3" type="submit" id="button">Enviar</button>
                 </form>
+                
             </div>
             <div class="col">
 
@@ -252,22 +256,21 @@
       </section>
     </main>
     <footer class="footer bg-dark">
-        <div class="container py-5 text-light">
-            
+        <div class="container py-3 text-light">
               <div class="row">
-                <div class="col-6 col-md-4 mb-3">
+                <div class="col-12 col-md-4 mb-3">
                   <div class="d-flex justify-content-center">
                     <img src="./img/logo.png" alt="logo Alpes" class="w-50 ">
                   </div>
                   <p class="d-flex justify-content-center fw-bolder">Cervejaria Alpes</p>
                 </div>
           
-                <div class="col-6 col-md-4 mb-3">
+                <div class="col-12 col-md-4 mb-3">
                   <h5>Endereço</h5>
                   <i class="fa-solid fa-house"></i>
                 </div>
           
-                <div class="col-6 col-md-4 mb-3">
+                <div class="col-12 col-md-4 mb-3">
                     <h5>Contatos</h5>
                     <div>
                      <p> <i class="fa-solid fa-phone"></i> 31-99999-9999</p>
@@ -278,24 +281,23 @@
                     </div>
                 </div>
               </div>
-          
-              <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
-                <p class="copyright">© 2023 Cervejaria Alpers. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                    <li class="ms-3">  
+                <div class="d-flex flex-column flex-sm-row justify-content-md-around justify-content-xl-between pe-xl-5 ps-xl-5">
+                
+                  <div class="d-inline-flex justify-content-center me-lg-5 me-xl-0">
+                    <div class="ms-3">  
                         <a class="instagram" href="https://www.instagram.com/cervejaria_alpes/?igshid=YmMyMTA2M2Y%3D" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M20 0a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h16zm-4.89 4.5H8.9C6.33 4.5 4.6 6.15 4.5 8.66V15.09c0 1.3.42 2.41 1.27 3.23a4.34 4.34 0 0 0 2.88 1.17l.27.01h6.16c1.3 0 2.4-.42 3.18-1.18a4.25 4.25 0 0 0 1.23-2.95l.01-.26V8.9c0-1.28-.42-2.36-1.21-3.15a4.24 4.24 0 0 0-2.92-1.23l-.26-.01zm-6.2 1.4h6.24c.9 0 1.66.26 2.2.8.47.5.77 1.18.81 1.97V15.1c0 .94-.32 1.7-.87 2.21-.5.47-1.17.74-1.98.78H8.92c-.91 0-1.67-.26-2.21-.78-.5-.5-.77-1.17-.81-2V8.88c0-.9.26-1.66.8-2.2a2.98 2.98 0 0 1 2-.78h6.45-6.23zM12 8.1a3.88 3.88 0 0 0 0 7.74 3.88 3.88 0 0 0 0-7.74zm0 1.39a2.5 2.5 0 0 1 2.48 2.48A2.5 2.5 0 0 1 12 14.45a2.5 2.5 0 0 1-2.48-2.48A2.5 2.5 0 0 1 12 9.49zm4.02-2.36a.88.88 0 1 0 0 1.76.88.88 0 0 0 0-1.76z"/></svg>
                         </a>
-                    </li>
-                    <li class="ms-3">
+                    </div>
+                    <div class="ms-3">
                         <a class="linkedin" href="https://www.linkedin.com/company/soulcodeacademy/" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ffffff"><path d="M20 0a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h16zM8.95 9.4H6.16v8.1h2.8V9.4zm6.84-.19c-1.32 0-2 .63-2.38 1.16l-.13.18V9.4h-2.79l.01.49V17.5h2.78v-4.52a1.52 1.52 0 0 1 1.52-1.64c.96 0 1.37.66 1.41 1.66v4.5H19v-4.64c0-2.49-1.37-3.65-3.2-3.65zM7.58 5.5C6.62 5.5 6 6.1 6 6.9c0 .73.54 1.32 1.38 1.4h.18c.97 0 1.57-.62 1.57-1.4-.01-.8-.6-1.4-1.55-1.4z"/></svg>
                         </a>
-                    </li>
-                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-                </ul>
-              </div>
-          </div>
+                    </div>
+                  </div>
+                  <p class="copyright mt-3 mt-md-0">© 2023 Cervejaria Alpers. All rights reserved.</p>
+                </div>
+        </div>
     </footer>
     <!-- Pop up para sucesso no envio -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">

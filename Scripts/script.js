@@ -37,16 +37,13 @@ for(i of UFs){
 }
 })();
 
-button.addEventListener("click", (e) =>{
-    
+function validado(){
     const toast = new bootstrap.Toast(toastSucesso);
     toast.show();
-    
     setTimeout(() => {
-        e
-    }, 2000);
-    
-})
+        return true;
+    }, 3000);
+}
 
 /* VALIDAÇÕES DOS CAMPOS */
 nome.addEventListener("blur", () => {
