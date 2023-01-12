@@ -5,6 +5,16 @@ body{
     width: 100%;
 }
 
+.banner{
+  position: relative;
+    background-image: url("../img/cerveja.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .footer{
     width: 100%;
 }

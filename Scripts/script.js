@@ -8,6 +8,8 @@ const cidade = document.getElementById("city");
 const estado = document.getElementById("state");
 const cnpj = document.getElementById("00NDn00000Mc1M9");
 const tipoNegocio = document.getElementById("00NDn00000Mc1ME");
+const toastSucesso = document.getElementById("toastSuccesso");
+const form = document.getElementById("form");
 var UFs = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
 let nomeValidado = false;
 let sobrenomeValidado = false;
@@ -34,6 +36,17 @@ for(i of UFs){
     estado.innerHTML += option;
 }
 })();
+
+button.addEventListener("click", (e) =>{
+    
+    const toast = new bootstrap.Toast(toastSucesso);
+    toast.show();
+    
+    setTimeout(() => {
+        e
+    }, 2000);
+    
+})
 
 /* VALIDAÇÕES DOS CAMPOS */
 nome.addEventListener("blur", () => {
@@ -198,8 +211,6 @@ function validaForm(firstName, lastName, email, mobile, city, state, cnpj, tipoN
         
         button.setAttribute("disabled", "true")
         button.classList.remove("btn-primary");
-        //button.classList.add("btn-danger");
-        //button.innerText = "Bloqueado";
         return false;
     }
 }
