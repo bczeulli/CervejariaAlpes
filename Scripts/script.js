@@ -20,6 +20,8 @@ let estadoValidado = false;
 let cnpjValidado = false;
 let tipoNegocioValidado = false;
 
+AOS.init();
+
 /* Máscara para telefone e celular */
 const telefoneMascara = (value) => {
     if (!value) return "";
@@ -265,3 +267,4 @@ function validarCNPJ(cnpj) {
     return true;
     
 }
+
