@@ -13,6 +13,10 @@ p{
     color: white;
 }
 
+label{
+    color: white;
+}
+
 .banner{
   position: relative;
     background-image: url("../img/banner.jpg");
