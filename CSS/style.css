@@ -18,12 +18,10 @@ label{
 }
 
 .banner{
-  position: relative;
     background-image: url("../img/banner.jpg");
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 }
 .navbar{
@@ -32,7 +30,7 @@ label{
 
 
 .footer{
-    width: 100%;
+    
     background-color: rgb(15, 15, 15);
 }
 .copyright{
