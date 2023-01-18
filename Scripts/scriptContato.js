@@ -5,7 +5,7 @@ const phoneContato = document.querySelector(".phone");
 const tipoContato = document.querySelector(".tipo");
 const assuntoContato = document.getElementById("subject");
 const mensagemContato = document.getElementById("description");
-const toastSucessoContato = document.getElementById("toastSucessoContato");
+const toastSucessoContato = document.getElementById("toastSuccessoContato");
 const exampleModal = document.getElementById("exampleModal");
 let nomeContatoValidado = false;
 let emailContatoValidado = false;
@@ -23,23 +23,15 @@ const telefoneMascaraContato = (value) => {
     return value;
 }
 
-
 function ContatoValidado(){
-    /* const modal = bootstrap.Modal.getInstance(exampleModal); 
-    modal.hide(); */
-    
-    
+    const modal = bootstrap.Modal.getInstance(exampleModal); 
+    modal.hide();
+    const toast = new bootstrap.Toast(toastSucessoContato);
+    toast.show();
     setTimeout(() => {
-        /* const toast = new bootstrap.Toast(toastSucessoContato);
-        toast.show(); */
         return true;
-    }, 3000);
+    }, 5000);
 }
-
-/* buttonContato.addEventListener("click", (e) =>{
-    e.preventDefault();
-    
-}) */
 
 /* VALIDAÇÕES DOS CAMPOS EM CONTATO*/
 nomeContato.addEventListener("blur", () => {

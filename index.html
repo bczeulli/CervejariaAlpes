@@ -181,6 +181,7 @@
       </section>
       
       <section class="cadastro">
+        
         <div class="container mb-5 mt-5 border-top" data-aos="fade-up" data-aos-duration="2000">
           <div class="row row-cols-1 row-cols-md-2 mt-5">
             <div class="col d-flex justify-content-center">
@@ -262,6 +263,7 @@
             
           </div>
         </div>
+        
       </section>
     </main>
     <footer class="footer">
@@ -365,8 +367,8 @@
           </div>
           <div class="modal-body bg-dark">
             <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" onsubmit="return ContatoValidado()">
-              <input type=hidden name="oid" value="00DDn000007pbsf">
-              <input type=hidden name="retURL" value="http://127.0.0.1:5500/index.html">
+              <input type=hidden name="orgid" id="orgid" value="00DDn000007pbsf">
+              <input type=hidden name="retURL" id="retURL" value="http://127.0.0.1:5500/index.html">
               <input type=hidden id="Status" name="Status" value="New">
               <input type=hidden id="00NDn00000Ou3e5" name="00NDn00000Ou3e5" value="Aberto">
               <div class="row g-3">
@@ -390,7 +392,7 @@
                   <input type="text" class="form-control phone" name="phone" id="phone" placeholder="(xx) xxxxx-xxxx" maxlength="15">
                   <small id="validacaoContatoPhone"></small>
                 </div>
-
+    
                 <div class="col-md-6">
                   <label for="type" class="form-label">Tipo de Contato<span class="text-danger">*</span></label>
                   <select class="form-select tipo" name="00NDn00000Mc1ME" id="00NDn00000Mc1ME" required>
