@@ -15,6 +15,7 @@
     <!-- JS SCRIPTS -->
     <script src="https://kit.fontawesome.com/5fbe75db98.js" crossorigin="anonymous"></script>
     <script src="./Scripts/script.js" defer></script>
+    <script src="./Scripts/scriptContato.js" defer></script>
     
     
   </head>
@@ -189,7 +190,7 @@
                 <h4 class="mb-3">Cadastre-se</h4>
                 <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" onsubmit="return validado()">
                   <input type=hidden name="oid" value="00DDn000007pbsf">
-                  <input type=hidden name="retURL" value="https://bczeulli.github.io/CervejariaAlpes/">
+                  <input type=hidden name="retURL" value="https://bczeulli.github.io/CervejariaAlpes/#cadastro">
                   <input type=hidden id="lead_source" name="lead_source" value="Web">
                   <div class="row g-3">
                     <div class="col-sm-6">
@@ -314,7 +315,7 @@
                 </div>
         </div>
     </footer>
-    <!-- Pop up para sucesso no envio -->
+    <!-- Pop up para sucesso no envio do cadastro-->
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
       <div
         id="toastSuccesso"
@@ -334,20 +335,93 @@
         </div>
       </div>
     </div>
+    <!-- Pop up para sucesso no envio do contato-->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="toastSuccessoContato"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex text-bg-primary border-0">
+          <div class="toast-body">Mensagem enviada com sucesso!</div>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <div class="modal-header bg-dark">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Contato</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-            <button type="button" class="btn btn-primary">Enviar</button>
+          <div class="modal-body bg-dark">
+            <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST" onsubmit="return ContatoValidado()">
+              <input type=hidden name="oid" value="00DDn000007pbsf">
+              <input type=hidden name="retURL" value="http://127.0.0.1:5500/index.html">
+              <input type=hidden id="Status" name="Status" value="New">
+              <input type=hidden id="00NDn00000Ou3e5" name="00NDn00000Ou3e5" value="Aberto">
+              <div class="row g-3">
+                <div class="col-sm-12">
+                  <label for="name" class="form-label">Nome<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control nome" name="name" id="name" placeholder="" value="" required>
+                  <small id="validacaoContatoNome"></small>
+                </div>
+    
+                <div class="col-12">
+                  <label for="email" class="form-label">E-mail<span class="text-danger">*</span></label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control email" name="email" id="email" placeholder="seu@email.com" required>
+                  </div>
+                  <small id="validacaoContatoEmail"></small>
+                </div>
+    
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Telefone<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control phone" name="phone" id="phone" placeholder="(xx) xxxxx-xxxx" maxlength="15">
+                  <small id="validacaoContatoPhone"></small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="type" class="form-label">Tipo de Contato<span class="text-danger">*</span></label>
+                  <select class="form-select tipo" name="00NDn00000Mc1ME" id="00NDn00000Mc1ME" required>
+                    <option value="">Selecionar</option>
+                    <option value="Elogio">Elogio</option>
+                    <option value="Dúvidas">Dúvidas</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Problemas">Problemas</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                  <small id="validacaoContatoTipo"></small>
+                </div>
+    
+                <div class="col-md-12">
+                  <label for="subject" class="form-label">Assunto<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="" required>
+                  <small id="validacaoContatoAssunto"></small>
+                </div>
+    
+                
+                <div class="col-md-12">
+                  <label for="description" class="form-label">Mensagem<span class="text-danger">*</span></label>
+                  <textarea class="form-control" name="description" id="description" rows="3" required></textarea>
+                  <small id="validacaoContatoMensagem"></small>
+                </div>
+              </div>
+              <div class="modal-footer bg-dark mt-4"></div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button  class="btn btn-primary" type="submit" id="buttonContato">Enviar</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

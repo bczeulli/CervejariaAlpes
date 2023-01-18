@@ -10,6 +10,8 @@ const cnpj = document.getElementById("00NDn00000Mc1M9");
 const tipoNegocio = document.getElementById("00NDn00000Mc1ME");
 const toastSucesso = document.getElementById("toastSuccesso");
 const form = document.getElementById("form");
+
+
 var UFs = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
 let nomeValidado = false;
 let sobrenomeValidado = false;
@@ -19,7 +21,6 @@ let cidadeValidado = false;
 let estadoValidado = false;
 let cnpjValidado = false;
 let tipoNegocioValidado = false;
-
 
 
 /* Máscara para telefone e celular */
@@ -47,7 +48,7 @@ function validado(){
     }, 3000);
 }
 
-/* VALIDAÇÕES DOS CAMPOS */
+/* VALIDAÇÕES DOS CAMPOS EM CADASTRO*/
 nome.addEventListener("blur", () => {
     let validacaoNome = document.getElementById('validacaoNome');
     
@@ -203,7 +204,6 @@ function validaForm(firstName, lastName, email, mobile, city, state, cnpj, tipoN
 
         button.removeAttribute("disabled");
         button.classList.add("btn-primary");
-        button.innerText = "Enviar";
         return true;
 
     } else {
@@ -267,5 +267,7 @@ function validarCNPJ(cnpj) {
     return true;
     
 }
+
+
 AOS.init();
 
