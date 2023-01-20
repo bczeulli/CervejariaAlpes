@@ -30,7 +30,7 @@ function ContatoValidado(){
     toast.show();
     setTimeout(() => {
         return true;
-    }, 5000);
+    }, 6000);
 }
 
 /* VALIDAÇÕES DOS CAMPOS EM CONTATO*/
